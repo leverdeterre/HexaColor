@@ -1,6 +1,6 @@
 # HexaColor
 
-[![CI Status](http://img.shields.io/travis/leverdeterre/HexaColor.svg?style=flat)](https://travis-ci.org/Jerome Morissard/HexaColor)
+[![CI Status](http://img.shields.io/travis/leverdeterre/HexaColor.svg?style=flat)](https://travis-ci.org/leverdeterre/HexaColor)
 [![Version](https://img.shields.io/cocoapods/v/HexaColor.svg?style=flat)](http://cocoapods.org/pods/HexaColor)
 [![License](https://img.shields.io/cocoapods/l/HexaColor.svg?style=flat)](http://cocoapods.org/pods/HexaColor)
 [![Platform](https://img.shields.io/cocoapods/p/HexaColor.svg?style=flat)](http://cocoapods.org/pods/HexaColor)
@@ -10,6 +10,7 @@
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## Requirements
+
 
 ## Installation
 
