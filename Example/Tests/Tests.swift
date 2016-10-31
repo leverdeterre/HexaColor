@@ -14,16 +14,39 @@ class Tests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        XCTAssert(true, "Pass")
+    func test_normalHexa() {
+        let color = UIColor.hexaColor(fromHexaString :"#FFFFFF")
+        let result = (color != nil)
+        XCTAssert(result, "UIColor.hexaColor return a instance")
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measureBlock() {
-            // Put the code you want to measure the time of here.
-        }
+    func test_buggedHexa() {
+        var color = UIColor.hexaColor(fromHexaString :"#FFFFF")
+        var result = (color == nil)
+        XCTAssert(result, "UIColor.hexaColor need full hexa value")
+        
+        color = UIColor.hexaColor(fromHexaString :"#FFFF")
+        result = (color == nil)
+        XCTAssert(result, "UIColor.hexaColor need full hexa value")
+
+        color = UIColor.hexaColor(fromHexaString :"#FFF")
+        result = (color == nil)
+        XCTAssert(result, "UIColor.hexaColor need full hexa value")
+
+        color = UIColor.hexaColor(fromHexaString :"#FF")
+        result = (color == nil)
+        XCTAssert(result, "UIColor.hexaColor need full hexa value")
+
+        color = UIColor.hexaColor(fromHexaString :"#F")
+        result = (color == nil)
+        XCTAssert(result, "UIColor.hexaColor need full hexa value")
+
+        color = UIColor.hexaColor(fromHexaString :"#")
+        result = (color == nil)
+        XCTAssert(result, "UIColor.hexaColor need full hexa value")
+        
+        color = UIColor.hexaColor(fromHexaString :"")
+        result = (color == nil)
+        XCTAssert(result, "UIColor.hexaColor need full hexa value")
     }
-    
 }
