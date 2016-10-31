@@ -3,7 +3,6 @@
 # * https://github.com/supermarin/xcpretty#usage
 
 osx_image: xcode8	
-xcode_sdk: iphonesimulator10.0
 #language: swift
 
 # cache: cocoapods
@@ -12,8 +11,8 @@ xcode_sdk: iphonesimulator10.0
 # - gem install cocoapods # Since Travis is not always on latest version
 # - pod install --project-directory=Example
 script:
-- set -o pipefail
 - xcodebuild -version
 - xcodebuild -showsdks
-- set -o pipefail && xcodebuild test -workspace Example/HexaColor.xcworkspace -scheme HexaColor-Example ONLY_ACTIVE_ARCH=NO -sdk "iphonesimulator10.0" -destination "OS=10.0,name=iPhone 7 Plus"  | xcpretty
+- set -o pipefail && xcodebuild test -workspace Example/HexaColor.xcworkspace -scheme HexaColor-Example ONLY_ACTIVE_ARCH=NO -destination 'platform=iOS Simulator,name=iPhone SE,OS=10.0'
+  | xcpretty
 - pod lib lint
