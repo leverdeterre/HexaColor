@@ -12,7 +12,8 @@ language: swift
 # - gem install cocoapods # Since Travis is not always on latest version
 # - pod install --project-directory=Example
 script:
-- set -o pipefail && xcodebuild -version
-- set -o pipefail && xcodebuild -showsdks
-- set -o pipefail && xcodebuild test -workspace Example/HexaColor.xcworkspace -scheme HexaColor-Example ONLY_ACTIVE_ARCH=NO | xcpretty
+- set -o pipefail
+- xcodebuild -version
+- xcodebuild -showsdks
+- set -o pipefail && xcodebuild test -workspace Example/HexaColor.xcworkspace -scheme HexaColor-Example ONLY_ACTIVE_ARCH=NO -sdk "iphonesimulator10.0" -destination "OS=10.0,name=iPhone 7 Plus"  | xcpretty
 - pod lib lint
