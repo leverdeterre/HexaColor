@@ -23,7 +23,7 @@ pod "HexaColor"
 
 ## Author
 
-Jerome Morissard, jerome.morissard@backelite.com
+Jerome Morissard, morissardj@gmail.com
 
 ## License
 
