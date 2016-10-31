@@ -1,0 +1,6 @@
+use_frameworks!
+target 'HexaColor_Tests' do
+  pod 'HexaColor', :path => '../'
+  
+  
+end
