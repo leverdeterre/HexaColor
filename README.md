@@ -22,6 +22,12 @@ it, simply add the following line to your Podfile:
 pod "HexaColor"
 ```
 
+## Usage
+
+```swift
+UIColor.hexaColor(fromHexaString: "#FFB71B")
+```
+
 ## Author
 
 Jerome Morissard, morissardj@gmail.com
